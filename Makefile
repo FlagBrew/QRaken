@@ -32,7 +32,7 @@ include $(DEVKITARM)/3ds_rules
 #     - <libctru folder>/default_icon.png
 #---------------------------------------------------------------------------------
 APP_TITLE		:= 	QRaken
-APP_DESCRIPTION	:=	TLSv1.2 QR Code Scanner
+APP_DESCRIPTION	:=	PoC QR Code Scanner
 APP_AUTHOR		:=	Bernardo Giordano
 
 VERSION_MAJOR := 1

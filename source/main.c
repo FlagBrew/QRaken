@@ -59,7 +59,7 @@ int main()
     // parse c2d text
     staticBuf = C2D_TextBufNew(256);
     dynamicBuf = C2D_TextBufNew(32);
-    C2D_TextParse(&c2dTitle, staticBuf, "QRaken - TLSv1.2 compatible QR code scanner");
+    C2D_TextParse(&c2dTitle, staticBuf, "QRaken - PoC QR code scanner");
     C2D_TextParse(&c2dInstructions, staticBuf, "Press START to exit.");
     C2D_TextParse(&c2dStateReady, staticBuf, "State: READY");
     C2D_TextParse(&c2dStateDownloading, staticBuf, "State: DOWNLOADING");
