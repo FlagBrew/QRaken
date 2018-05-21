@@ -40,12 +40,6 @@ static size_t handle_data(char* ptr, size_t size, size_t nmemb, void* userdata);
 static void deletePrevious(u64 titleid);
 static void installCia(const char* path);
 
-static void rectangle(int x, int y, int w, int h, u32 c)
-{
-    C2D_DrawTriangle(x, y, c, x, y+h, c, x+w, y, c, 0.5f);
-    C2D_DrawTriangle(x+w, y, c, x, y+h, c, x+w, y+h, c, 0.5f);
-}
-
 int main()
 {
     // store the old time limit to reset when the app ends
@@ -307,14 +301,14 @@ static void uiThread(void* arg)
         C2D_DrawImageAt(data->image, 0.0f, 0.0f, 0.5f, NULL, 1.0f, 1.0f);
         
         C2D_SceneBegin(bottom);
-        rectangle(0, 0, 320, 20, C2D_Color32(0x70, 0x70, 0x70, 0xFF));
-        rectangle(0, 220, 320, 20, C2D_Color32(0x70, 0x70, 0x70, 0xFF));
+        C2D_DrawRectSolid(0, 0, 0.5f, 320, 20, C2D_Color32(0x70, 0x70, 0x70, 0xFF));
+        C2D_DrawRectSolid(0, 220, 0.5f, 320, 20, C2D_Color32(0x70, 0x70, 0x70, 0xFF));
 
         // state bars
-        rectangle(4, 34, 312, 24, C2D_Color32f(0, 0, 0, 1));
-        rectangle(4, 60, 312, 24, C2D_Color32f(0, 0, 0, 1));
-        rectangle(6, 36, 308, 20, C2D_Color32f(1, 1, 1, 1));
-        rectangle(6, 62, 308, 20, C2D_Color32f(1, 1, 1, 1));
+        C2D_DrawRectSolid(4, 34, 0.5f, 312, 24, C2D_Color32f(0, 0, 0, 1));
+        C2D_DrawRectSolid(4, 60, 0.5f, 312, 24, C2D_Color32f(0, 0, 0, 1));
+        C2D_DrawRectSolid(6, 36, 0.5f, 308, 20, C2D_Color32f(1, 1, 1, 1));
+        C2D_DrawRectSolid(6, 62, 0.5f, 308, 20, C2D_Color32f(1, 1, 1, 1));
 
         C2D_TextBufClear(dynamicBuf);
         static char buffer[32];
