@@ -16,4 +16,4 @@ QRaken for 3DS relies on [latest libctru](https://github.com/smealum/ctrulib), [
 
 ## License
 
-This project is licensed under the GNU GPLv3 license. See [LICENSE.md](https://github.com/BernardoGiordano/QRaken/blob/master/LICENSE) for details.
+This project is licensed under the GNU GPLv3 license. See [LICENSE.md](https://github.com/FlagBrew/QRaken/blob/master/LICENSE) for details.
